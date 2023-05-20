@@ -17,14 +17,11 @@ export default defineNuxtConfig({
       ],
       noscript: [
         { children: 'Javascript is required' }
-      ],
-      bodyAttrs: {
-        class: 'bg-zinc-900 font-sans pattern select-none'
-      }
+      ]
     }
   }, 
   css: [
-    '~/assets/main.scss'
+    '@/assets/main.scss'
   ],
   postcss: {
     plugins: {
