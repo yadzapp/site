@@ -23,10 +23,22 @@ body {
   background-color: black;
   color: white;
   // text-align: center;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 20px;
+  line-height: 120%;
   font-weight: 700;
   letter-spacing: -0.04em;
+}
+
+#bg-image {
+  background-image: url(/assets/bg-01.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.logo {
+  width: auto;
+  height: 48px;
 }
 
 h1 {

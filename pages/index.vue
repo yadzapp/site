@@ -2,17 +2,22 @@
 
   <div class="flex flex-col justify-between h-screen">
 
+    <div id="bg-image" class="w-full h-4/5"></div>
+
     <!-- Logo -->
-    <div class="w-full">
+    <!-- <div class="w-full">
       <img src="@/assets/yadz-logo.svg" class="w-full">
-    </div>
+    </div> -->
 
     <!-- Grid 12 cols -->
-    <div class="flex justify-between px-8 pb-8">
+    <div class="grow flex items-center justify-between px-12">
 
-      <p class="">Yet Another DayZ Launcher</p>
+      <div class="flex items-center gap-6">
+        <img src="@/assets/yadz-logo.svg" class="logo">
+        <p class="">Yet Another DayZ Launcher</p>
+      </div>
 
-      <ul class="flex flex-row space-x-8">
+      <ul class="flex flex-row space-x-6">
         <li><a href="https://discord.gg/cGYmqqYT" title="Discord" class="hover:underline">Discord</a></li>
         <li><a href="https://twitter.com/yadzapp" title="Twitter" class="hover:underline">Twitter</a></li>
       </ul>
