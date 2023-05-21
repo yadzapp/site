@@ -21,7 +21,7 @@ export default defineNuxtConfig({
     }
   }, 
   css: [
-    '@/assets/css/raster2.css',
+    '@/assets/css/reset.css',
     '@/assets/css/main.scss'
   ],
   postcss: {
