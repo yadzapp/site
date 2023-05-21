@@ -1,5 +1,4 @@
 <template>
-  <div>
-    Hello. It's working!
-  </div>
+  <img src="@/assets/yadz-logo.svg">
+  <h1>Yet Another DayZ Launcher</h1>
 </template>
