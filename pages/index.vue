@@ -1,14 +1,14 @@
 <template>
 
-  <div class="flex flex-col justify-between h-screen pb-8">
+  <div class="flex flex-col justify-between h-screen">
 
     <!-- Logo -->
-    <div class="w-full p-2">
+    <div class="w-full">
       <img src="@/assets/yadz-logo.svg" class="w-full">
     </div>
 
     <!-- Grid 12 cols -->
-    <div class="flex justify-between px-8">
+    <div class="flex justify-between px-8 pb-8">
 
       <p class="">Yet Another DayZ Launcher</p>
 
