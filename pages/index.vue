@@ -18,6 +18,7 @@
       </div>
 
       <ul class="flex flex-row space-x-6">
+        <li class="opacity-50">Join the conversation</li>
         <li><a href="https://discord.gg/cGYmqqYT" title="Discord" class="hover:underline">Discord</a></li>
         <li><a href="https://twitter.com/yadzapp" title="Twitter" class="hover:underline">Twitter</a></li>
       </ul>
