@@ -7,8 +7,8 @@
     <!-- Grid 12 cols -->
     <div class="grow flex items-center justify-between px-12">
 
-      <div id="logo" class="flex items-center gap-6">
-        <div v-html="yadzLogo" />
+      <div class="flex items-center gap-6">
+        <div id="logo" v-html="yadzLogo" />
         <p class="">Yet Another DayZ Launcher</p>
       </div>
 
