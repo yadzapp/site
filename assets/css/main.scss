@@ -27,7 +27,29 @@ body {
   background-position: center;
 }
 
-.logo {
+#logo svg {
   width: auto;
-  height: 48px;
+  height: 56px;
+
+  & path {
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+}
+
+#logo:hover {
+  & path#Y {
+    transform: translateX(56.76px);
+  }
+
+  & path#A {
+    transform: translateX(3.15px);
+  }
+
+  & path#D {
+    transform: translateX(-56.12px);
+  }
+
+  & path#Z {
+    transform: translateX(0.88px);
+  }
 }
