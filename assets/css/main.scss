@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-
+// Tailwind
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+// Typography
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 html {
   font-family: 'Inter', sans-serif;
@@ -11,6 +15,9 @@ html {
   text-rendering: optimizelegibility;
 }
 
+
+
+// Miscellaneous
 body {
   background-color: #0b100a;
   color: white;
@@ -20,13 +27,44 @@ body {
   letter-spacing: -0.04em;
 }
 
-#bg-image {
-  background-image: url(/assets/bg-01.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+// #bg-image {
+//   background-image: url(/assets/bg/bg-01.jpg);
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: center;
+// }
+
+.bg-image-item {
+  transition: opacity 2s;
+
+  &.off {
+    opacity: 0;
+  }
 }
 
+a {
+  position: relative;
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    opacity: 0;
+    transition: opacity 0.1s;
+  }
+}
+
+
+
+// LOGO
 #logo svg {
   width: auto;
   height: 56px;
@@ -37,6 +75,8 @@ body {
 }
 
 #logo:hover {
+  cursor: crosshair;
+
   & path#Y {
     transform: translateX(56.76px);
   }
