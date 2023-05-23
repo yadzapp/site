@@ -44,19 +44,25 @@ export default {
     const ImagesContainer = document.querySelector('.bg-image')
     // const ImagesItems = document.querySelectorAll('.bg-image-item')
 
+
     // Randomize images
     // https://stackoverflow.com/a/11972692/1615587
     for (var i = ImagesContainer.children.length; i >= 0; i--) {
       ImagesContainer.appendChild(ImagesContainer.children[Math.random() * i | 0]);
     }
 
-    // Setting a timeout in JS, but it could be a CSS animation
+
+
+    // Just some time for loading
     setTimeout(function () {
 
+      // Slideshow
+      // Every 10s fades out image, remove and prepend
       setInterval(function(){
         const last = document.querySelector('.bg-image-item:last-child')
         last.classList.add('off')
-
+        
+        // wait for the fadeout animation ends
         setTimeout(function(){
           last.remove()
           last.classList.remove('off')
@@ -65,7 +71,11 @@ export default {
       }, 10000)
 
       ImagesContainer.classList.add('on')
-    }, 200)
+    }, 100)
+
+    ImagesContainer.addEventListener('click', function(){
+      
+    })
 
   }
 }
