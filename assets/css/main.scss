@@ -34,16 +34,18 @@ body {
 //   background-position: center;
 // }
 
+
 .bg-image {
   opacity: 0;
 
   &.on {
-    transition: opacity 2s;
+    transition: opacity 2s; //must be here to avoid buggy image after loading page
     opacity: 1;
   }
 }
 
 .bg-image-item {
+  opacity: 1;
   transition: opacity 2s;
 
   &.off {
@@ -67,7 +69,7 @@ a {
     height: 2px;
     background-color: currentColor;
     opacity: 0;
-    transition: opacity 0.1s;
+    transition: opacity 0.2s;
   }
 }
 
@@ -79,7 +81,7 @@ a {
   height: 56px;
 
   & path {
-    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: transform 0.6s cubic-bezier(0.87, 0, 0.13, 1);
   }
 }
 

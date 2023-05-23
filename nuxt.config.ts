@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'YADZ · Yet Another DayZ Launcher',
+      title: 'YADZ — Yet Another DayZ Launcher',
       meta: [
         {
           charset: 'utf-8'
