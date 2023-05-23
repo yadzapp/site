@@ -18,11 +18,15 @@ html {
 
 
 // Miscellaneous
+html, body {
+  // height: 100vh;
+}
+
 body {
   background-color: #0b100a;
   color: white;
-  font-size: 20px;
-  line-height: 120%;
+  // font-size: 20px;
+  // line-height: 120%;
   font-weight: 700;
   letter-spacing: -0.04em;
 }
@@ -76,6 +80,7 @@ a {
 
 
 // LOGO
+#logo {height: auto;}
 #logo svg {
   width: auto;
   height: 56px;

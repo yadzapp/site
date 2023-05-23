@@ -15,11 +15,11 @@
     </ul>
 
     <!-- Logo and Social -->
-    <div class="grow flex items-center justify-between px-4 md:px-12">
+    <div class="grow flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between px-4 md:px-12 md:text-xl py-6 md:py-0">
 
       <!-- Logo -->
-      <div class="flex items-center gap-6">
-        <div id="logo" v-html="yadzLogo" />
+      <div class="flex items-start md:items-center flex-col md:flex-row gap-0 md:gap-6">
+        <div id="logo" class="pb-2 md:pb-0" v-html="yadzLogo" />
         <p>Yet Another DayZ Launcher</p>
       </div>
 
