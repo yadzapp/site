@@ -4,14 +4,9 @@
 
     <!-- Images slideshow -->
     <ul class="bg-image relative w-full h-4/5 cursor-crosshair">
-      <li class="bg-image-item"><img src="~/assets/bg/bg-image-01.jpg" class="absolute w-full h-full object-cover"></li>
-      <li class="bg-image-item"><img src="~/assets/bg/bg-image-02.jpg" class="absolute w-full h-full object-cover"></li>
-      <li class="bg-image-item"><img src="~/assets/bg/bg-image-03.jpg" class="absolute w-full h-full object-cover"></li>
-      <li class="bg-image-item"><img src="~/assets/bg/bg-image-04.jpg" class="absolute w-full h-full object-cover"></li>
-      <li class="bg-image-item"><img src="~/assets/bg/bg-image-05.jpg" class="absolute w-full h-full object-cover"></li>
-      <li class="bg-image-item"><img src="~/assets/bg/bg-image-06.jpg" class="absolute w-full h-full object-cover"></li>
-      <li class="bg-image-item"><img src="~/assets/bg/bg-image-07.jpg" class="absolute w-full h-full object-cover"></li>
-      <li class="bg-image-item"><img src="~/assets/bg/bg-image-08.jpg" class="absolute w-full h-full object-cover"></li>
+      <li class="bg-image-item"><img src="~/assets/bg/bg-image-1.jpg" class="image absolute w-full h-full object-cover"></li>
+      <li class="bg-image-item"><img src="~/assets/bg/bg-image-2.jpg" class="image absolute w-full h-full object-cover"></li>
+      <li class="bg-image-item"><img src="~/assets/bg/bg-image-3.jpg" class="image absolute w-full h-full object-cover"></li>
     </ul>
 
     <!-- Logo and Social -->
@@ -71,6 +66,7 @@ export default {
     setInterval(StartSlideshow, slideshowTime)
 
 
+
     // Click on image slideshow
     ImagesContainer.addEventListener('click', RemoveLastChild)
 
@@ -89,10 +85,14 @@ export default {
 
     // Remove image last child
     function RemoveLastChild(){
-      const last = document.querySelector('.bg-image-item:last-child')
-      last.remove()
-      last.classList.remove('off')
-      ImagesContainer.prepend(last)
+      const lastChild = document.querySelector('.bg-image-item:last-child')
+      const randomNumber = Math.floor(Math.random() * 34) + 1;
+
+      lastChild.querySelector('.image').src = "_nuxt/assets/bg/bg-image-" + randomNumber + ".jpg"
+
+      lastChild.remove()
+      lastChild.classList.remove('off')
+      ImagesContainer.prepend(lastChild)
     }
   }
 }
