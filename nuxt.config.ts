@@ -13,10 +13,20 @@ export default defineNuxtConfig({
         }
       ],
       link: [
-        { rel: 'icon', href: '/favicon.svg' }
+        {
+          rel: 'icon',
+          href: '/favicon.svg'
+        }
+      ],
+      script: [
+        {
+          src: 'https://www.googletagmanager.com/gtag/js?id=G-FTTMEJ49JT'
+        }
       ],
       noscript: [
-        { children: 'Javascript is required' }
+        {
+          children: 'Javascript is required'
+        }
       ]
     }
   }, 

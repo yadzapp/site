@@ -42,6 +42,15 @@ export default {
   },
   mounted() {
 
+    // Google Analytics
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-FTTMEJ49JT');
+
+
+
+    // Interactions
     const ImagesContainer = document.querySelector('.bg-image')
     ImagesContainer.classList.add('on')
     // const ImagesItems = document.querySelectorAll('.bg-image-item')
