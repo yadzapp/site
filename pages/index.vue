@@ -4,9 +4,9 @@
 
     <!-- Images slideshow -->
     <ul class="bg-image relative w-full h-4/5 cursor-crosshair">
-      <li class="bg-image-item"><img src="~/assets/bg/bg-image-1.jpg" class="image absolute w-full h-full object-cover"></li>
-      <li class="bg-image-item"><img src="~/assets/bg/bg-image-2.jpg" class="image absolute w-full h-full object-cover"></li>
-      <li class="bg-image-item"><img src="~/assets/bg/bg-image-3.jpg" class="image absolute w-full h-full object-cover"></li>
+      <li class="bg-image-item"><img src="/assets/bg/bg-image-1.jpg" class="image absolute w-full h-full object-cover"></li>
+      <li class="bg-image-item"><img src="/assets/bg/bg-image-2.jpg" class="image absolute w-full h-full object-cover"></li>
+      <li class="bg-image-item"><img src="/assets/bg/bg-image-3.jpg" class="image absolute w-full h-full object-cover"></li>
     </ul>
 
     <!-- Logo and Social -->
@@ -88,7 +88,7 @@ export default {
       const lastChild = document.querySelector('.bg-image-item:last-child')
       const randomNumber = Math.floor(Math.random() * 34) + 1;
 
-      lastChild.querySelector('.image').src = "_nuxt/assets/bg/bg-image-" + randomNumber + ".jpg"
+      lastChild.querySelector('.image').src = "/assets/bg/bg-image-" + randomNumber + ".jpg"
 
       lastChild.remove()
       lastChild.classList.remove('off')
