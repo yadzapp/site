@@ -3,11 +3,13 @@
   <div class="flex flex-col justify-between h-screen">
 
     <!-- Images slideshow -->
-    <ul class="bg-image relative w-full h-4/5 cursor-crosshair">
-      <li class="bg-image-item"><img src="/assets/bg/bg-image-1.jpg" class="image absolute w-full h-full object-cover"></li>
-      <li class="bg-image-item"><img src="/assets/bg/bg-image-2.jpg" class="image absolute w-full h-full object-cover"></li>
-      <li class="bg-image-item"><img src="/assets/bg/bg-image-3.jpg" class="image absolute w-full h-full object-cover"></li>
-    </ul>
+    <div class="bg-wrapper relative w-full h-4/5">
+      <ul class="bg-image w-full h-full">
+        <li class="bg-image-item"><img src="/assets/bg-1.jpg" class="image absolute w-full h-full object-cover"></li>
+        <li class="bg-image-item"><img src="/assets/bg-2.jpg" class="image absolute w-full h-full object-cover"></li>
+      </ul>
+      <div class="credits absolute bottom-12 right-12 opacity-40 text-xs">Screenshots by <a href="https://www.twitch.tv/tuckchaylorz" title="TuckChaylorZ Twitch">TuckChaylorZ</a></div>
+    </div>
 
     <!-- Logo and Social -->
     <div class="grow flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between px-4 md:px-12 md:text-xl py-6 md:py-0">
@@ -16,12 +18,14 @@
       <div class="flex items-start md:items-center flex-col md:flex-row gap-0 md:gap-6">
         <div id="logo" class="pb-2 md:pb-0" v-html="yadzLogo" />
         <p>Yet Another DayZ Launcher</p>
+        <p class="opacity-60">Coming soon</p>
       </div>
 
       <!-- Social -->
-      <ul class="flex flex-row space-x-6">
-        <!-- <li class="opacity-50">Join the conversation</li> -->
-        <li><a href="https://twitter.com/yadzapp" title="Twitter" class="">Twitter</a></li>
+      <ul class="flex flex-row gap-2 md:gap-6 pt-4 md:pt-0">
+        <!-- <li class="opacity-50">Follow for updates</li> -->
+        <li><a href="https://discord.gg/rDxwBqnVPq" title="Discord">Discord</a></li>
+        <li><a href="https://twitter.com/yadzapp" title="Twitter">Twitter</a></li>
       </ul>
     </div>
 
@@ -45,54 +49,91 @@ export default {
 
 
 
-    // Interactions
-    const ImagesContainer = document.querySelector('.bg-image')
-    ImagesContainer.classList.add('on')
-    // const ImagesItems = document.querySelectorAll('.bg-image-item')
 
 
+    // Slideshow 01
+    // const imagesContainer = document.querySelector('.bg-image')
+    // imagesContainer.classList.add('on')
 
-    // Randomize images
-    // https://stackoverflow.com/a/11972692/1615587
-    for (var i = ImagesContainer.children.length; i >= 0; i--) {
-      ImagesContainer.appendChild(ImagesContainer.children[Math.random() * i | 0]);
-    }
+    // Randomize images - https://stackoverflow.com/a/11972692/1615587
+    // for (var i = imagesContainer.children.length; i >= 0; i--) {
+    //   imagesContainer.appendChild(imagesContainer.children[Math.random() * i | 0]);
+    // }
 
-
-
-    // Slideshow
-    // Every xs fades out image, remove and prepend
-    const slideshowTime = 10000
-    setInterval(StartSlideshow, slideshowTime)
-
+    // Every x seconds
+    // const slideshowTime = 6000
+    // setInterval(startSlideshow, slideshowTime)
 
 
     // Click on image slideshow
-    ImagesContainer.addEventListener('click', RemoveLastChild)
+    // imagesContainer.addEventListener('click', removeLastChild)
+
+
+    // Fades out image, remove and prepend
+    // function startSlideshow(){
+    //   const last = document.querySelector('.bg-image-item:last-child')
+    //   last.classList.add('off')
+
+    //   // wait for the fadeout animation ends
+    //   setTimeout(removeLastChild, 2200)
+    // }
+
+
+    // Remove image last child and prepend
+    // Randomize image number
+    // function removeLastChild(){
+    //   const lastChild = document.querySelector('.bg-image-item:last-child')
+    //   const randomNumber = Math.floor(Math.random() * 23) + 1;
+
+    //   lastChild.querySelector('.image').src = "/assets/bg-" + randomNumber + ".jpg"
+
+    //   lastChild.remove()
+    //   lastChild.classList.remove('off')
+    //   imagesContainer.prepend(lastChild)
+    // }
 
 
 
-    // Start slideshow interval
-    function StartSlideshow(){
+
+
+    // Slideshow 02
+    const imagesWrapper = document.querySelector('.bg-wrapper')
+    const imagesContainer = document.querySelector('.bg-image')
+    const images = document.querySelectorAll('.bg-image-item img')
+    const imgQty = 23
+    
+    // Randomize images
+    imagesContainer.classList.add('on')
+    images.forEach(function(img){
+      const randomNumber = Math.floor(Math.random() * imgQty) + 1;
+      img.src = "/assets/bg-" + randomNumber + ".jpg"
+    })
+
+    // Every x seconds
+    const slideshowTime = 7000
+    setInterval(startSlideshow, slideshowTime)
+
+    // Fades out image, remove and prepend
+    function startSlideshow(){
       const last = document.querySelector('.bg-image-item:last-child')
       last.classList.add('off')
 
       // wait for the fadeout animation ends
-      setTimeout(RemoveLastChild, 2000)
+      setTimeout(removeLastChild, 2200)
     }
 
 
-
-    // Remove image last child
-    function RemoveLastChild(){
+    // Remove image last child and prepend
+    // Randomize image number
+    function removeLastChild(){
       const lastChild = document.querySelector('.bg-image-item:last-child')
-      const randomNumber = Math.floor(Math.random() * 34) + 1;
+      const randomNumber = Math.floor(Math.random() * 23) + 1;
 
-      lastChild.querySelector('.image').src = "/assets/bg/bg-image-" + randomNumber + ".jpg"
+      lastChild.querySelector('.image').src = "/assets/bg-" + randomNumber + ".jpg"
 
       lastChild.remove()
       lastChild.classList.remove('off')
-      ImagesContainer.prepend(lastChild)
+      imagesContainer.prepend(lastChild)
     }
   }
 }

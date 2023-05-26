@@ -83,7 +83,7 @@ a {
 #logo {height: auto;}
 #logo svg {
   width: auto;
-  height: 56px;
+  height: 48px;
 
   & path {
     transition: transform 0.6s cubic-bezier(0.87, 0, 0.13, 1);
@@ -107,5 +107,13 @@ a {
 
   & path#Z {
     transform: translateX(0.88px);
+  }
+}
+
+.credits {
+  transition: opacity 0.6s;
+
+  &:hover {
+    opacity: 1;
   }
 }
