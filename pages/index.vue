@@ -3,12 +3,12 @@
   <div class="flex flex-col justify-between h-screen">
 
     <!-- Images slideshow -->
-    <div class="bg-wrapper relative w-full h-4/5">
-      <ul class="bg-image w-full h-full">
-        <li class="bg-image-item"><img src="/assets/bg-1.jpg" class="image absolute w-full h-full object-cover"></li>
-        <li class="bg-image-item"><img src="/assets/bg-2.jpg" class="image absolute w-full h-full object-cover"></li>
+    <div class="slide-container relative w-full h-4/5">
+      <ul class="slide-list w-full h-full">
+        <li class="slide-image"><img src="/assets/slide-1.jpg" class="image absolute w-full h-full object-cover"></li>
+        <li class="slide-image"><img src="/assets/slide-2.jpg" class="image absolute w-full h-full object-cover"></li>
       </ul>
-      <div class="credits absolute bottom-4 md:bottom-12 right-4 md:right-12 opacity-40 text-xs">
+      <div class="slide-credits absolute bottom-4 md:bottom-12 right-4 md:right-12 opacity-40 text-xs">
         Screenshots by <a href="https://www.twitch.tv/tuckchaylorz" title="TuckChaylorZ Twitch">TuckChaylorZ</a>
       </div>
     </div>
@@ -52,64 +52,16 @@ export default {
 
 
 
-
-
-    // Slideshow 01
-    // const imagesContainer = document.querySelector('.bg-image')
-    // imagesContainer.classList.add('on')
-
-    // Randomize images - https://stackoverflow.com/a/11972692/1615587
-    // for (var i = imagesContainer.children.length; i >= 0; i--) {
-    //   imagesContainer.appendChild(imagesContainer.children[Math.random() * i | 0]);
-    // }
-
-    // Every x seconds
-    // const slideshowTime = 6000
-    // setInterval(startSlideshow, slideshowTime)
-
-
-    // Click on image slideshow
-    // imagesContainer.addEventListener('click', removeLastChild)
-
-
-    // Fades out image, remove and prepend
-    // function startSlideshow(){
-    //   const last = document.querySelector('.bg-image-item:last-child')
-    //   last.classList.add('off')
-
-    //   // wait for the fadeout animation ends
-    //   setTimeout(removeLastChild, 2200)
-    // }
-
-
-    // Remove image last child and prepend
-    // Randomize image number
-    // function removeLastChild(){
-    //   const lastChild = document.querySelector('.bg-image-item:last-child')
-    //   const randomNumber = Math.floor(Math.random() * 23) + 1;
-
-    //   lastChild.querySelector('.image').src = "/assets/bg-" + randomNumber + ".jpg"
-
-    //   lastChild.remove()
-    //   lastChild.classList.remove('off')
-    //   imagesContainer.prepend(lastChild)
-    // }
-
-
-
-
-
-    // Slideshow 02
-    const imagesWrapper = document.querySelector('.bg-wrapper')
-    const imagesContainer = document.querySelector('.bg-image')
-    const images = document.querySelectorAll('.bg-image-item img')
+    // Slideshow
+    const imagesContainer = document.querySelector('.slide-list')
+    const images = document.querySelectorAll('.slide-image img')
     const imgQty = 23
     
     // Randomize images
     imagesContainer.classList.add('on')
     images.forEach(function(img){
       const randomNumber = Math.floor(Math.random() * imgQty) + 1;
-      img.src = "/assets/bg-" + randomNumber + ".jpg"
+      img.src = "/assets/slide-" + randomNumber + ".jpg"
     })
 
     // Every x seconds
@@ -118,7 +70,7 @@ export default {
 
     // Fades out image, remove and prepend
     function startSlideshow(){
-      const last = document.querySelector('.bg-image-item:last-child')
+      const last = document.querySelector('.slide-image:last-child')
       last.classList.add('off')
 
       // wait for the fadeout animation ends
@@ -129,10 +81,10 @@ export default {
     // Remove image last child and prepend
     // Randomize image number
     function removeLastChild(){
-      const lastChild = document.querySelector('.bg-image-item:last-child')
+      const lastChild = document.querySelector('.slide-image:last-child')
       const randomNumber = Math.floor(Math.random() * 23) + 1;
 
-      lastChild.querySelector('.image').src = "/assets/bg-" + randomNumber + ".jpg"
+      lastChild.querySelector('.image').src = "/assets/slide-" + randomNumber + ".jpg"
 
       lastChild.remove()
       lastChild.classList.remove('off')

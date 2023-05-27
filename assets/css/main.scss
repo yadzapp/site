@@ -28,7 +28,7 @@ body {
 
 
 // Slideshow
-.bg-image {
+.slide-list {
   opacity: 0;
 
   &.on {
@@ -37,12 +37,20 @@ body {
   }
 }
 
-.bg-image-item {
+.slide-image {
   opacity: 1;
   transition: opacity 2.6s;
 
   &.off {
     opacity: 0;
+  }
+}
+
+.slide-credits {
+  transition: opacity 0.6s;
+
+  &:hover {
+    opacity: 1;
   }
 }
 
@@ -72,6 +80,7 @@ a {
 
 
 
+
 // Logo
 #logo svg path {
   transition: transform 0.6s cubic-bezier(0.87, 0, 0.13, 1);
@@ -94,13 +103,5 @@ a {
 
   & path#Z {
     transform: translateX(0.88px);
-  }
-}
-
-.credits {
-  transition: opacity 0.6s;
-
-  &:hover {
-    opacity: 1;
   }
 }
