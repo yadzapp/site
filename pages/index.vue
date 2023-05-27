@@ -18,7 +18,7 @@
 
       <!-- Logo -->
       <div class="flex items-start md:items-center flex-col md:flex-row gap-0 md:gap-6">
-        <div id="logo" class="w-32 md:w-44 pb-2 md:pb-0" v-html="yadzLogo" />
+        <div id="logo" class="w-14 md:w-20 pb-2 md:pb-0" v-html="yadzLogo" />
         <div class="flex flex-col">
           <p>Yet Another DayZ Launcher</p>
           <p class="opacity-60">Simple app for launching DayZ. Coming soon.</p>
@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import yadzLogo from "~/assets/yadz-logo.svg?raw";
+import yadzLogo from "~/assets/yadz-logo-ver.svg?raw";
 
 export default {
   data() {
