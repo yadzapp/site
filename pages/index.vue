@@ -18,10 +18,14 @@
 
       <!-- Logo -->
       <div class="flex items-start md:items-center flex-col md:flex-row gap-0 md:gap-6">
-        <div class="logo-wrapper w-14 md:w-20 h-14 md:h-20 pb-2 md:pb-0">
-          <div id="logo" class="w-14 md:w-20 h-14 md:h-20 absolute" v-html="yadzLogo" />
-          <div id="logo" class="w-14 md:w-20 h-14 md:h-20 absolute" v-html="dayzLogo" />
+
+        <div class="logo-outer w-14 md:w-20 h-14 md:h-20 pb-2 md:pb-0 relative">
+          <div class="logo-wrapper w-full h-full relative">
+            <div class="logo yadz w-full h-full absolute" v-html="yadzLogo" />
+            <div class="logo dayz w-full h-full absolute" v-html="dayzLogo" />
+          </div>
         </div>
+
         <div class="flex flex-col">
           <p>Yet Another DayZ Launcher</p>
           <p class="opacity-60">Simple app for launching DayZ. Coming soon.</p>

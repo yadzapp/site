@@ -79,31 +79,57 @@ a {
 
 
 // Logo
-#logo svg {
-  width: 100%;
-  height: auto;
+.logo-outer {
+  perspective: 100px;
 
-  & path {
-    transition: transform 0.6s cubic-bezier(0.87, 0, 0.13, 1);
+  &:hover .logo-wrapper {
+    transform: rotateY(360deg);
   }
 }
 
-#logo:hover {
-  cursor: crosshair;
+.logo-wrapper {
+  transform-style: preserve-3d;
+  transition: transform 1s cubic-bezier(0.65, 0, 0.35, 1);
+}
 
-  & path#Y {
-    transform: translateX(56.76px);
+.logo {
+  backface-visibility: hidden;
+
+  svg {
+    width: 100%;
+    height: auto;
+
+    // path {
+    //   transition: transform 0.6s cubic-bezier(0.87, 0, 0.13, 1);
+    // }
   }
 
-  & path#A {
-    transform: translateX(3.15px);
+  &.yadz {
+    // background-color: yellow;
   }
 
-  & path#D {
-    transform: translateX(-56.12px);
+  &.dayz {
+    // background-color: purple;
+    transform: rotateY(180deg);
   }
 
-  & path#Z {
-    transform: translateX(0.88px);
+  &:hover {
+    cursor: crosshair;
+
+    // path#Y {
+    //   transform: translateX(56.76px);
+    // }
+
+    // path#A {
+    //   transform: translateX(3.15px);
+    // }
+
+    // path#D {
+    //   transform: translateX(-56.12px);
+    // }
+
+    // path#Z {
+    //   transform: translateX(0.88px);
+    // }
   }
 }
