@@ -13,14 +13,15 @@
       </div>
     </div>
 
+
     <!-- Logo and Social -->
     <div class="grow flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between px-4 md:px-12 py-6 md:py-0">
 
       <!-- Logo -->
       <div class="flex items-start md:items-center flex-col md:flex-row gap-0 md:gap-6">
 
-        <div class="logo-outer w-14 md:w-20 h-14 md:h-20 pb-2 md:pb-0 relative">
-          <div class="logo-wrapper w-full h-full relative">
+        <div class="logo-outer w-14 md:w-20 h-14 md:h-20 mb-2 md:mb-0">
+          <div class="logo-wrapper w-full h-full">
             <div class="logo yadz w-full h-full absolute" v-html="yadzLogo" />
             <div class="logo dayz w-full h-full absolute" v-html="dayzLogo" />
           </div>
