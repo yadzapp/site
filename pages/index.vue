@@ -8,22 +8,25 @@
         <li class="bg-image-item"><img src="/assets/bg-1.jpg" class="image absolute w-full h-full object-cover"></li>
         <li class="bg-image-item"><img src="/assets/bg-2.jpg" class="image absolute w-full h-full object-cover"></li>
       </ul>
-      <div class="credits absolute bottom-12 right-12 opacity-40 text-xs">Screenshots by <a href="https://www.twitch.tv/tuckchaylorz" title="TuckChaylorZ Twitch">TuckChaylorZ</a></div>
+      <div class="credits absolute bottom-4 md:bottom-12 right-4 md:right-12 opacity-40 text-xs">
+        Screenshots by <a href="https://www.twitch.tv/tuckchaylorz" title="TuckChaylorZ Twitch">TuckChaylorZ</a>
+      </div>
     </div>
 
     <!-- Logo and Social -->
-    <div class="grow flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between px-4 md:px-12 md:text-xl py-6 md:py-0">
+    <div class="grow flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between px-4 md:px-12 py-6 md:py-0">
 
       <!-- Logo -->
       <div class="flex items-start md:items-center flex-col md:flex-row gap-0 md:gap-6">
-        <div id="logo" class="pb-2 md:pb-0" v-html="yadzLogo" />
-        <p>Yet Another DayZ Launcher</p>
-        <p class="opacity-60">Coming soon</p>
+        <div id="logo" class="w-32 md:w-44 pb-2 md:pb-0" v-html="yadzLogo" />
+        <div class="flex flex-col">
+          <p>Yet Another DayZ Launcher</p>
+          <p class="opacity-60">Simple app for launching DayZ. Coming soon.</p>
+        </div>
       </div>
 
       <!-- Social -->
       <ul class="flex flex-row gap-2 md:gap-6 pt-4 md:pt-0">
-        <!-- <li class="opacity-50">Follow for updates</li> -->
         <li><a href="https://discord.gg/rDxwBqnVPq" title="Discord">Discord</a></li>
         <li><a href="https://twitter.com/yadzapp" title="Twitter">Twitter</a></li>
       </ul>
@@ -110,7 +113,7 @@ export default {
     })
 
     // Every x seconds
-    const slideshowTime = 7000
+    const slideshowTime = 8000
     setInterval(startSlideshow, slideshowTime)
 
     // Fades out image, remove and prepend
@@ -119,7 +122,7 @@ export default {
       last.classList.add('off')
 
       // wait for the fadeout animation ends
-      setTimeout(removeLastChild, 2200)
+      setTimeout(removeLastChild, 2800)
     }
 
 
