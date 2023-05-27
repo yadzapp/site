@@ -18,7 +18,10 @@
 
       <!-- Logo -->
       <div class="flex items-start md:items-center flex-col md:flex-row gap-0 md:gap-6">
-        <div id="logo" class="w-14 md:w-20 pb-2 md:pb-0" v-html="yadzLogo" />
+        <div class="logo-wrapper w-14 md:w-20 h-14 md:h-20 pb-2 md:pb-0">
+          <div id="logo" class="w-14 md:w-20 h-14 md:h-20 absolute" v-html="yadzLogo" />
+          <div id="logo" class="w-14 md:w-20 h-14 md:h-20 absolute" v-html="dayzLogo" />
+        </div>
         <div class="flex flex-col">
           <p>Yet Another DayZ Launcher</p>
           <p class="opacity-60">Simple app for launching DayZ. Coming soon.</p>
@@ -37,22 +40,25 @@
 
 <script>
 import yadzLogo from "~/assets/yadz-logo-ver.svg?raw";
+import dayzLogo from "~/assets/dayz-logo.svg?raw";
 
 export default {
   data() {
-    return { yadzLogo };
+    return { yadzLogo, dayzLogo };
   },
   mounted() {
 
+    //////
     // Google Analytics
+    //////
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-FTTMEJ49JT');
 
-
-
+    //////
     // Slideshow
+    //////
     const imagesContainer = document.querySelector('.slide-list')
     const images = document.querySelectorAll('.slide-image img')
     const imgQty = 23
@@ -76,7 +82,6 @@ export default {
       // wait for the fadeout animation ends
       setTimeout(removeLastChild, 2800)
     }
-
 
     // Remove image last child and prepend
     // Randomize image number
