@@ -1,16 +1,18 @@
 {
   "name": "nuxt-app",
   "private": true,
+  "version": "1.0.0",
+  "main": "electron/main.js",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "generate": "nuxi generate",
+    "electron": "electron ."
   },
   "devDependencies": {
     "@nuxtjs/svg": "^0.4.0",
     "autoprefixer": "^10.4.14",
+    "electron": "^25.0.1",
     "nuxt": "^3.5.0",
     "postcss": "^8.4.23",
     "sass": "^1.62.1",
