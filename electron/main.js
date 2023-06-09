@@ -1,5 +1,8 @@
 const { app, BrowserWindow } = require('electron')
 const path = require('path')
+const serve = require('electron-serve')
+
+serve({ directory: 'dist' })
 
 function createWindow() {
   const win = new BrowserWindow({
@@ -10,7 +13,8 @@ function createWindow() {
     }
   })
 
-  win.loadFile('index.html')
+  // win.loadFile('dist/index.html')
+  win.loadURL('app://-')
   win.webContents.openDevTools()
 }
 
