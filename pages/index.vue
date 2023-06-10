@@ -52,6 +52,7 @@ export default {
     return { yadzLogo, dayzLogo };
   },
   mounted() {
+    console.log('hello!');
 
     //////
     // Google Analytics
