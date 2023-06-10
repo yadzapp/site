@@ -5,9 +5,11 @@ name: Build
 
 on:
   push:
-    branches: [ "testing-electron-5" ]
+    branches:
+      'testing-electron-5'
   pull_request:
-    branches: [ "testing-electron-5" ]
+    branches:
+      'testing-electron-5'
 
 jobs:
   build:
