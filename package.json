@@ -10,6 +10,11 @@
     "generate": "nuxi generate",
     "build": "electron-builder"
   },
+  "build": {
+    "directories": {
+      "output": "build"
+    }
+  },
   "devDependencies": {
     "@nuxtjs/svg": "^0.4.0",
     "autoprefixer": "^10.4.14",
