@@ -1,5 +1,5 @@
 # YADZ Site
-Website for the app YADZ, Yet Another DayZ Launcher. Simple app for launching DayZ. 
+Website for the app YADZ, Yet Another DayZ Launcher. Simple app for launching DayZ.
 
 [yadz.app](https://yadz.app/)
 
