@@ -1,45 +1,22 @@
-# Nuxt 3 Minimal Starter
+# YADZ Site
+Website for the app YADZ, Yet Another DayZ Launcher. Simple app for launching DayZ. 
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+[yadz.app](https://yadz.app/)
 
 ## Setup
-
-Make sure to install the dependencies:
-
 ```bash
-# yarn
+# Install dependecies
 yarn install
 
-# npm
-npm install
+## Start development server on `localhost:3000`
+yarn dev
 
-# pnpm
-pnpm install
+## Build the application for production
+yarn build
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Screenshots
+All screenshots featured on this website were taken by the amazing [TuckChaylorZ](https://www.twitch.tv/tuckchaylorz). Thank you!
 
 ## License
 [MIT](LICENSE)
