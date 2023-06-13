@@ -37,6 +37,7 @@
       <ul class="flex flex-row gap-2 md:gap-6 pt-4 md:pt-0">
         <li><a href="https://discord.gg/rDxwBqnVPq" title="Discord">Discord</a></li>
         <li><a href="https://twitter.com/yadzapp" title="Twitter">Twitter</a></li>
+        <li><a href="https://github.com/yadzapp" title="GitHub">GitHub</a></li>
       </ul>
     </div>
 
