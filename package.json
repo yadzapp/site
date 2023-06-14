@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "author": "Pedro Ivo Hudson <hello@podrivo.com>",
   "private": true,
   "scripts": {
     "build": "nuxt build",
