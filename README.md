@@ -19,4 +19,4 @@ yarn build
 All screenshots featured on this website were taken by the amazing [TuckChaylorZ](https://www.twitch.tv/tuckchaylorz). Thank you!
 
 ## License
-[MIT](LICENSE)
+Released under the [MIT license](LICENSE).
