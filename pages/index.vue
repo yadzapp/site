@@ -8,9 +8,9 @@
         <li class="slide-image"><img src="/assets/slide-1.jpg" class="image absolute w-full h-full object-cover"></li>
         <li class="slide-image"><img src="/assets/slide-2.jpg" class="image absolute w-full h-full object-cover"></li>
       </ul>
-      <div class="slide-credits absolute bottom-4 md:bottom-12 right-4 md:right-12 opacity-40 text-xs">
-        Screenshots by <a href="https://www.twitch.tv/tuckchaylorz" title="TuckChaylorZ Twitch">TuckChaylorZ</a>
-      </div>
+      <!-- <div class="slide-credits absolute bottom-4 md:bottom-12 right-4 md:right-12 opacity-40 text-xs"> -->
+        <!-- Screenshots by <a href="https://www.twitch.tv/tuckchaylorz" title="TuckChaylorZ Twitch">TuckChaylorZ</a> -->
+      <!-- </div> -->
     </div>
 
 
@@ -20,24 +20,24 @@
       <!-- Logo -->
       <div class="flex items-start md:items-center flex-col md:flex-row gap-0 md:gap-6">
 
-        <div class="logo-outer w-14 md:w-20 h-14 md:h-20 mb-2 md:mb-0">
+        <div class="logo-outer w-[150px] h-[64px] mb-2 md:mb-0">
           <div class="logo-wrapper w-full h-full">
-            <div class="logo yadz w-full h-full absolute" v-html="yadzLogo" />
-            <div class="logo dayz w-full h-full absolute" v-html="dayzLogo" />
+            <div class="logo yadz w-full h-full absolute rounded-3xl" v-html="yadzLogo" />
+            <div class="logo dayz w-full h-full absolute rounded-3xl" v-html="dayzLogo" />
           </div>
         </div>
 
         <div class="flex flex-col">
           <p>Yet Another DayZ Launcher</p>
-          <p class="opacity-60">Simple app for launching DayZ. Coming soon.</p>
+          <p class="opacity-60">Simple app for launching DayZ — Coming soon</p>
         </div>
       </div>
 
       <!-- Social -->
       <ul class="flex flex-row gap-2 md:gap-6 pt-4 md:pt-0">
-        <li><a href="https://discord.gg/rDxwBqnVPq" title="Discord">Discord</a></li>
-        <li><a href="https://twitter.com/yadzapp" title="Twitter">Twitter</a></li>
-        <li><a href="https://github.com/yadzapp" title="GitHub">GitHub</a></li>
+        <li><a href="https://discord.gg/rDxwBqnVPq" title="Discord" class="underline underline-offset-8 decoration-transparent hover:decoration-[--color-brand-900] hover:underline-offset-4 transition-all">Discord</a></li>
+        <li><a href="https://twitter.com/yadzapp" title="Twitter" class="underline underline-offset-8 decoration-transparent hover:decoration-[--color-brand-900] hover:underline-offset-4 transition-all">Twitter</a></li>
+        <li><a href="https://github.com/yadzapp" title="GitHub" class="underline underline-offset-8 decoration-transparent hover:decoration-[--color-brand-900] hover:underline-offset-4 transition-all">GitHub</a></li>
       </ul>
     </div>
 
@@ -45,8 +45,8 @@
 </template>
 
 <script>
-import yadzLogo from "~/assets/yadz-logo-ver.svg?raw";
-import dayzLogo from "~/assets/dayz-logo.svg?raw";
+import yadzLogo from "~/assets/yadz-logo-hor.svg?raw";
+import dayzLogo from "~/assets/dayz-logo-hor.svg?raw";
 
 export default {
   data() {

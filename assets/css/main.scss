@@ -4,11 +4,17 @@
 @tailwind utilities;
 
 
+:root {
+  --color-brand-900: #593000;
+  --color-brand-100: #FFB714;
+}
+
 
 // Typography
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-html {
+
+html, body {
   font-family: 'Inter', sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -16,33 +22,13 @@ html {
 }
 
 
-
 // Core
 body {
-  background-color: #0b100a;
-  color: white;
+  background-color: white;
+  color: var(--color-brand-900);
   font-weight: 700;
-  letter-spacing: -0.04em;
-}
-
-a {
-  position: relative;
-
-  &:hover::before {
-    opacity: 1;
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: currentColor;
-    opacity: 0;
-    transition: opacity 0.2s;
-  }
+  line-height: 150%;
+  letter-spacing: -0.05rem;
 }
 
 
@@ -80,7 +66,7 @@ a {
 
 // Logo flip
 .logo-outer {
-  perspective: 90px;
+  perspective: 120px;
 
   &:hover .logo-wrapper {
     transform: rotateY(180deg);
@@ -94,6 +80,8 @@ a {
 
 .logo {
   backface-visibility: hidden;
+  background: var(--color-brand-100);
+  color: var(--color-brand-900);
 
   &:hover {
     cursor: crosshair;
