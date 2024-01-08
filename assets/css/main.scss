@@ -80,8 +80,8 @@ body {
 
 .logo {
   backface-visibility: hidden;
-  background: var(--color-brand-100);
-  color: var(--color-brand-900);
+  background: var(--color-brand-900);
+  color: var(--color-brand-100);
 
   &:hover {
     cursor: crosshair;
