@@ -29,15 +29,15 @@
 
         <div class="flex flex-col">
           <p>Yet Another DayZ Launcher</p>
-          <p class="opacity-60">Simple app for launching DayZ — Coming soon</p>
+          <p class="opacity-60">Simple app for launching DayZ. Coming soon.</p>
         </div>
       </div>
 
       <!-- Social -->
       <ul class="flex flex-row gap-2 md:gap-6 pt-4 md:pt-0">
-        <li><a href="https://discord.gg/rDxwBqnVPq" title="Discord" class="underline underline-offset-8 decoration-transparent hover:decoration-[--color-brand-900] hover:underline-offset-4 transition-all">Discord</a></li>
-        <li><a href="https://twitter.com/yadzapp" title="Twitter" class="underline underline-offset-8 decoration-transparent hover:decoration-[--color-brand-900] hover:underline-offset-4 transition-all">Twitter</a></li>
-        <li><a href="https://github.com/yadzapp" title="GitHub" class="underline underline-offset-8 decoration-transparent hover:decoration-[--color-brand-900] hover:underline-offset-4 transition-all">GitHub</a></li>
+        <li><a href="https://discord.gg/rDxwBqnVPq" title="Discord" class="underline underline-offset-8 decoration-transparent hover:decoration-current hover:underline-offset-4 transition-all">Discord</a></li>
+        <li><a href="https://twitter.com/yadzapp" title="Twitter/X" class="underline underline-offset-8 decoration-transparent hover:decoration-current hover:underline-offset-4 transition-all">Twitter/X</a></li>
+        <li><a href="https://github.com/yadzapp" title="GitHub" class="underline underline-offset-8 decoration-transparent hover:decoration-current hover:underline-offset-4 transition-all">GitHub</a></li>
       </ul>
     </div>
 

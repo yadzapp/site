@@ -7,6 +7,7 @@
 :root {
   --color-brand-900: #593000;
   --color-brand-100: #FFB714;
+  --color-moss-100: #47533E;
 }
 
 
@@ -24,8 +25,9 @@ html, body {
 
 // Core
 body {
-  background-color: white;
-  color: var(--color-brand-900);
+  overflow: hidden;
+  background-color: var(--color-moss-100);
+  color: white;
   font-weight: 700;
   line-height: 150%;
   letter-spacing: -0.05rem;
